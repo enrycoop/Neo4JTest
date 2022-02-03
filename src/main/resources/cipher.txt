@@ -1,0 +1,12 @@
+CREATE (Inception:Movie {title:'Inception', director: 'Christopher Nolan'} )
+CREATE (DarkKnight:Movie {title:'The Dark Knight', director: 'Christopher Nolan'})
+
+CREATE (Peter:User {name:'Peter', age: 30})
+CREATE (Ben:User {name:'Ben', age: 21})
+CREATE (Jane:User {name:'Jane', age: 43})
+
+CREATE
+( Inception)-[:RATEDBY{rating: 9}]->(Peter),
+( Inception)-[:RATEDBY{rating: 8}]->(Ben),
+( DarkKnight)-[:RATEDBY{rating: 9}]->(Peter),
+( Inception)-[:RATEDBY{rating: 9}]->(Jane)
